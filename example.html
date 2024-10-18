@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Club</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'FuturaNowDisplay-ExtraBoldItalic', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background-color: #000;
+        }
+
+        /* Header styles */
+        .header {
+            background: #111;
+            padding: 10px 20px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 10px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: yellow;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #ff4c4c;
+        }
+
+        /* Main content styles */
+        .main {
+            height: 100vh;
+            background: url(data:) no-repeat center center;
+            display: flex;
+            background-size: 25%;
+            background-position: right center;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .content {
+            max-width: 60%;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: yellow;
+        }
+
+        .content p {
+            font-size: 35px;
+            margin-bottom: 10px;
+            margin-left: 125px;
+        }
+
+        .content .subheading {
+            font-size: 85px;
+            color: yellow;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-left: 250px;
+        }
+
+        .content .highlight {
+            font-size: 35px;
+            color: yellow;
+            font-weight: bold;
+            margin-left: 250px;
+        }
+
+        .content .small-text {
+            font-size: 20px;
+            margin-bottom: 1px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">FITNESS</div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="btn">Become a Member</a>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="content">
+            <p>Work Hard to Get</p>
+            <h1 class="subheading">Better <span style="font-size: 30px; color: white;">Life</span></h1>
+            <p class="small-text">START YOUR TRAININGS WITH OUR</p>
+            <h1 class="highlight">PROFESSIONAL<span style="font-size: 24px; color: white;">TRAINERS</span></h1>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </main>
+</body>
+</html>

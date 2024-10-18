@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page</title>
+    <style>
+        :root {
+            --primary-color: #fff;
+            --secondary-color: #000;
+            --background-color: #f4f4f4;
+            --font-family: 'Arial', sans-serif;
+            --font-size: 16px;
+            --transition-speed: 0.3s;
+            --hover-color: #00f;
+        }
+
+        body {
+            font-family: var(--font-family);
+            font-size: var(--font-size);
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--secondary-color);
+        }
+
+        nav a {
+            padding: 14px 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: background-color var(--transition-speed);
+        }
+
+        nav a:hover {
+            background-color: var(--hover-color);
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--hover-color);
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            transition: background-color var(--transition-speed);
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Website</h1>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We provide top-notch services to our clients.</p>
+        <button class="cta-button">Learn More</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Airosphere. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

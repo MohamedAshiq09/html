@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Button with Extended Circle Arc</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .signin-button {
+            display: flex;
+            align-items: center;
+            background-color: #1f2f70;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signin-button:hover {
+            background-color: #1B2E76;
+        }
+
+        .signin-button .icon {
+            margin-left: 5px;
+            stroke-width: 1.5;
+            transition: transform 0.3s ease;
+            width: 30px; 
+            height: 30px;
+        }
+
+        .signin-button .outer-circle {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            stroke-width: 1.5;
+            width: 40px; 
+            height: 40px;
+        }
+
+        .signin-button .inner-circle {
+            opacity: 0.3;
+        }
+
+        .signin-button .outer-circle path {
+            stroke: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="signin-button">
+        Sign in
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Arrow Icon -->
+            <polyline points="10 8 14 12 10 16"></polyline> <!-- Arrow -->
+            <line  x1="1" y1="12" x2="14" y2="12"></line> <!-- Line -->
+        </svg>
+
+        <!-- Extended Circular Arc around the arrow -->
+        <svg class="outer-circle" id="outer-circle" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Extended arc path that leaves a small gap -->
+            <path d="M6 6 A9 9 0 1 1 7 20" fill="none"></path> <!-- Almost full circle -->
+            <!-- Full circle with opacity 0.5 -->
+            <circle cx="12" cy="12" r="7" class="inner-circle" fill="currentColor"></circle>
+        </svg>
+    </button>
+
+</body>
+</html>

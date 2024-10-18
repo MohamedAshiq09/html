@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airosphere - Software Development Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f3f4f6;
+      color: red;
+    }
+
+    header {
+      background: #333;
+      color: red;
+      padding: 2rem;
+      text-align: center;
+      animation: bounceIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      animation: fadeInText 1.5s ease-in-out forwards;
+    }
+
+    #services {
+      padding: 4rem;
+      background: #e0f7fa;
+      text-align: center;
+      animation: slideInFromLeft 1.5s ease-in-out;
+    }
+
+    .service-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .service-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      padding: 2rem;
+      width: 280px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: popIn 1.5s ease-in-out forwards;
+    }
+
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    #cta {
+      background: red;
+      color: white;
+      text-align: center;
+      padding: 3rem;
+      margin-top: 3rem;
+      animation: slideInFromBottom 1.5s ease-in-out;
+    }
+
+    .cta-btn {
+      background-color: #ffd600;
+      border: none;
+      color: black;
+      padding: 1rem 3rem;
+      font-size: 1.4rem;
+      cursor: pointer;
+      border-radius: 50px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #ffeb3b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: black;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      animation: fadeInFooter 2s forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInFromBottom {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInFooter {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Top-notch Software Development</h1>
+    <p>Building scalable, secure, and powerful software solutions tailored to your business.</p>
+  </header>
+
+  <section id="services">
+    <h2>Our Expertise</h2>
+    <div class="service-list">
+      <div class="service-box">
+        <h3>Custom Software Development</h3>
+        <p>We design and build custom solutions from scratch, tailored to your unique requirements.</p>
+      </div>
+      <div class="service-box">
+        <h3>Web & Mobile App Development</h3>
+        <p>Delivering responsive, high-performance apps for mobile and web platforms.</p>
+      </div>
+      <div class="service-box">
+        <h3>Cloud Integration</h3>
+        <p>We provide seamless cloud integration solutions to enhance the scalability of your software.</p>
+      </div>
+      <div class="service-box">
+        <h3>API Development & Integration</h3>
+        <p>Our team builds robust APIs to connect your software with other services securely.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <h2>Ready to Innovate?</h2>
+    <p>Unlock the power of custom software with Airosphere's expert development team.</p>
+    <button class="cta-btn" onclick="showMessage()">Get in Touch</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Airosphere. Excellence in Software Development.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thank you for reaching out! We will contact you shortly.");
+    }
+  </script>
+</body>
+</html>

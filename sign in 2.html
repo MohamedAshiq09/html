@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Button with 3/4 Circle on Right</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .signin-button {
+            display: flex;
+            align-items: center;
+            background-color: #1f2f70;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signin-button:hover {
+            background-color: #162459;
+        }
+
+        .signin-button .icon {
+            margin-left: 5px; /* Arrow slightly to the left */
+            stroke-width: 2.5;
+            transition: transform 0.3s ease;
+        }
+
+        /* 3/4 Circle around the arrow */
+        .signin-button .outer-circle {
+            position: absolute;
+            top: 50%;
+            right: 15px; /* Move the circle to the right side */
+            transform: translateY(-50%);
+            stroke-width: 2.5;
+        }
+
+        /* Full inner circle with low opacity */
+        .signin-button .inner-circle {
+            opacity: 0.5;
+        }
+
+        /* Styling the 3/4 circle */
+        .signin-button .outer-circle path {
+            stroke: white;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="signin-button">
+        Sign in
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" id="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Arrow Icon -->
+            <polyline points="10 8 14 12 10 16"></polyline> <!-- Shifted to the left -->
+            <line x1="6" y1="12" x2="14" y2="12"></line> <!-- Line moved accordingly -->
+        </svg>
+
+        <!-- 3/4 Circle around the arrow on the right -->
+        <svg class="outer-circle" id="outer-circle" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- 3/4th circle path wrapping right side -->
+            <path d="M6 6 A9 9 0 1 1 18 18" fill="none"></path>
+            <!-- Full circle with opacity 0.5 -->
+            <circle cx="12" cy="12" r="7" class="inner-circle" fill="currentColor"></circle>
+        </svg>
+    </button>
+
+</body>
+</html>

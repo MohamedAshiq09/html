@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Company Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skills-section {
+            text-align: center;
+            padding: 60px;
+        }
+
+        .skills-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .skills-section p {
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 80px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(#ff3b3b var(--percentage), #2c2c2c var(--percentage));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .skill p {
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <section class="skills-section">
+        <h2>Our Company Skills</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nullam placerat est quis lorem tristique aliquet cras quis tristique felis vitae eleifend sapien.</p>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="circle" data-percentage="100"></div>
+                <p>MARKETING</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percentage="73"></div>
+                <p>BRANDING</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percentage="35"></div>
+                <p>CREATION</p>
+            </div>
+            <div class="skill">
+                <div class="circle" data-percentage="60"></div>
+                <p>GRAPHIC</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('.circle').forEach(circle => {
+            const percentage = circle.getAttribute('data-percentage');
+            circle.style.setProperty('--percentage', `${percentage}%`);
+            circle.innerHTML = `${percentage}%`;
+        });
+    </script>
+</body>
+</html>

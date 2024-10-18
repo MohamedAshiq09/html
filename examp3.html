@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Studio</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+ /* Header */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #ffffff;
+            color: #fff;
+        }
+
+        .nav-logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            margin: 0 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #050505;
+            font-weight: bold;
+            font-size: 17px;
+            text-transform: uppercase;
+        }
+
+        .nav-menu a:hover {
+            color: #ffffff;
+        }
+
+        .nav-button .btn {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: 2px solid #333;
+        }
+
+        .nav-button .btn:hover {
+            background-color: #444;
+            border-color: #444;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn {
+            color: #fff;
+            background: #0056b3;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+
+        .hero .btn-secondary {
+            background: #6c757d;
+        }
+
+        .hero .btn:hover {
+            background: #003f7f;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .features .feature-item {
+            width: 30%;
+        }
+
+        .features .feature-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .features .feature-item p {
+            font-size: 16px;
+        }
+
+        .features .feature-item i {
+            font-size: 40px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        /* Team Section */
+        .team {
+            background: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .team .team-member {
+            margin: 20px;
+        }
+
+        .team .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .team .team-member h3 {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .team .team-member p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #007bff;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact form input[type="submit"] {
+            background: #0056b3;
+            color: #fff;
+            cursor: pointer;
+            width: auto;
+        }
+
+        .contact form input[type="submit"]:hover {
+            background: #003f7f;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="https://via.placeholder.com/50" alt="Logo">
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="nav-button">
+            <a href="#get-started" class="btn">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1>WEB DEVELOPMENT STUDIO FOR YOUR BUSINESS</h1>
+        <p>Your one-stop solution for web development, design, and digital marketing.</p>
+        <a href="#contact" class="btn">Get Started</a>
+        <a href="#features" class="btn btn-secondary">Read More</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="feature-item">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Custom web solutions tailored to your business needs.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Web Design</h3>
+            <p>Stunning designs that engage and convert.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-chart-line"></i>
+            <h3>SEO/Marketing</h3>
+            <p>Boost your online presence and drive more traffic.</p>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>Daryl Rowe</h3>
+            <p>Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>Justin Treiber</h3>
+            <p>Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>Marsha Cyr</h3>
+            <p>Designer</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Team Member">
+            <h3>Debra Francis</h3>
+            <p>Manager</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="#">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <input type="text" name="phone" placeholder="Your Phone">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Web Development Studio. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+        @charset "UTF-8";
+        * {
+            outline: none;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        html,
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: 0.5s;
+            background: #ffffff;
+            cursor: default;
+            font-family: "Montserrat", sans-serif;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            display: block;
+            transition-duration: 0.3s;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resume {
+            width: 90%;
+            max-width: 960px;
+            background: #1a237e;
+            color: #ffffff;
+            margin: 20px auto;
+            box-shadow: 10px 10px #0e1442;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping for smaller screens */
+        }
+
+        .resume .base,
+        .resume .func {
+            box-sizing: border-box;
+            padding: 30px 15px;
+            width: 100%; /* Default to full width on smaller screens */
+        }
+
+        .resume .base {
+            background: #283593;
+            color: #ffffff;
+        }
+
+        .resume .base .profile {
+            background: #ffb300;
+            padding: 30px 15px 40px 15px;
+            margin: -30px -15px 45px -15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .resume .base .profile::after {
+            content: "";
+            position: absolute;
+            background: #303f9f;
+            width: 100%;
+            height: 30px;
+            bottom: -15px;
+            left: 0;
+            transform: skewY(-5deg);
+            z-index: -1;
+        }
+
+        .resume .base .profile .photo img {
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .resume .base .profile .photo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .resume .base .profile .info {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .resume .base .profile .info .name {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 1.75em;
+            text-transform: lowercase;
+            color: #1a237e;
+        }
+
+        .resume .base .profile .info .job {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 1.5em;
+            text-transform: lowercase;
+            color: #283593;
+        }
+
+        .resume .base .contact div {
+            line-height: 24px;
+        }
+
+        .resume .base .contact div a:hover {
+            color: #fdd835;
+        }
+
+        .resume .base .contact div:hover i {
+            color: #fdd835;
+        }
+
+        .resume .base .contact div i {
+            color: #ffb300;
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            text-align: center;
+            margin-right: 15px;
+            transition-duration: 0.3s;
+        }
+
+        .resume .base .follow .box {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .resume .base .follow .box a:hover i {
+            background: #fdd835;
+            border-radius: 5px;
+            transform: rotate(45deg) scale(0.8);
+        }
+
+        .resume .base .follow .box i {
+            display: inline-block;
+            font-size: 30px;
+            background: #ffb300;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            line-height: 60px;
+            color: #283593;
+            margin: 0 10px 10px 10px;
+            transition-duration: 0.3s;
+        }
+
+        .resume .func {
+            width: 70%; /* For larger screens */
+            padding: 30px;
+        }
+
+        .resume .func:hover > div {
+            transition-duration: 0.5s;
+        }
+
+        .resume .func:hover > div:hover h3 i {
+            transform: scale(1.25);
+        }
+
+        .resume .func:hover > div:not(:hover) {
+            opacity: 0.5;
+        }
+
+        .resume .func h3 {
+            transition-duration: 0.3s;
+            margin-top: 0;
+        }
+
+        .resume .func h3 i {
+            color: #283593;
+            background: #ffb300;
+            width: 42px;
+            height: 42px;
+            font-size: 20px;
+            line-height: 42px;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            margin-right: 8px;
+            transition-duration: 0.3s;
+        }
+
+        .resume .func .work ul li,
+        .resume .func .edu ul li {
+            position: relative;
+            margin-left: 15px;
+            padding-left: 25px;
+            padding-bottom: 15px;
+        }
+
+        .resume .func .work ul li::before,
+        .resume .func .edu ul li::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border: 3px solid #ffffff;
+            background: #ffb300;
+            border-radius: 50%;
+            left: 3px;
+            z-index: 1;
+        }
+
+        .resume .func .work ul li::after,
+        .resume .func .edu ul li::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background: #ffffff;
+            left: 5px;
+            top: 0;
+        }
+
+        .resume .func .skill .box {
+            float: left;
+            width: 50%;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .resume .func .skill .box .chart {
+            height: 110px;
+            position: relative;
+        }
+
+        .resume .func .skill .box .chart:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #ad1457;
+            clip-path: circle(50%);
+            position: absolute;
+        }
+
+        .resume .func .skill .box .chart .percent {
+            position: relative;
+            background: #d81b60;
+            display: inline-block;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            clip-path: circle(50%);
+        }
+
+        .resume .func .skill .box .chart .percent .slice {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            clip-path: inset(0 50% 0 0);
+            top: 0;
+            left: 50%;
+        }
+
+        .resume .func .skill .box .chart .percent .slice .bar {
+            width: 100%;
+            height: 100%;
+            background: #fdd835;
+            border-radius: 0 100% 100% 0 / 50%;
+            transform-origin: left;
+        }
+
+        .resume .func .skill .box .chart .percent .slice .fill {
+            clip-path: inset(0);
+            background: inherit;
+            transform: rotate(0);
+        }
+
+        .resume .func .skill .box .chart .percent .number {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #1a237e;
+        }
+
+        @keyframes preloader {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(108deg);
+            }
+        }
+
+        @keyframes preloader100 {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(180deg);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .resume {
+                flex-direction: column; /* Stacks sections vertically */
+            }
+
+            .resume .func {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .resume .base .profile .info .name {
+                font-size: 1.5em;
+            }
+
+            .resume .base .profile .info .job {
+                font-size: 1.25em;
+            }
+
+            .resume .func h3 i {
+                font-size: 16px;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+            }
+
+            .resume .func .skill .box {
+                width: 100%; /* Skills take full width on smaller screens */
+                margin-bottom: 15px;
+            }
+
+            .resume .func .skill .box .chart .percent {
+                width: 90px;
+                height: 90px;
+            }
+
+            .resume .func .skill .box .chart .percent .number {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- Left column: Personal details -->
+        <div class="base">
+            <!-- Profile section -->
+            <div class="profile">
+                <div class="photo">
+                    <img src="photo.jpg" alt="Profile Photo">
+                </div>
+                <div class="info">
+                    <p class="name">Your Name</p>
+                    <p class="job">Your Job Title</p>
+                </div>
+            </div>
+            <!-- Contact section -->
+            <div class="contact">
+                <div><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1234567890</a></div>
+                <div><i class="fas fa-envelope"></i> <a href="mailto:email@example.com">email@example.com</a></div>
+                <div><i class="fas fa-map-marker-alt"></i> Your Location</div>
+            </div>
+            <!-- Follow section -->
+            <div class="follow">
+                <div class="box"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="box"><a href="#"><i class="fab fa-twitter"></i></a></div>
+                <div class="box"><a href="#"><i class="fab fa-linkedin-in"></i></a></div>
+            </div>
+        </div>
+
+        <!-- Right column: Skills, work experience, etc. -->
+        <div class="func">
+            <!-- Work experience -->
+            <div class="work">
+                <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                <ul>
+                    <li>
+                        <p><strong>Job Title</strong> at Company</p>
+                        <p>Description of the job.</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Education -->
+            <div class="edu">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <ul>
+                    <li>
+                        <p><strong>Degree</strong> from Institution</p>
+                        <p>Description of the degree.</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Skills -->
+            <div class="skill">
+                <h3><i class="fas fa-cogs"></i> Skills</h3>
+                <div class="box">
+                    <div class="chart">
+                        <div class="percent">
+                            <div class="slice">
+                                <div class="bar"></div>
+                                <div class="fill"></div>
+                            </div>
+                            <div class="number">90%</div>
+                        </div>
+                    </div>
+                    <p>Skill Name</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharathi Student Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #34495e;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .navbar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .navbar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .profile-container, .payment, .course, .attendance, .internal {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="Logo 1.png" alt="Logo" />
+            <span>Bharathi Student Portal</span>
+        </div>
+        <div class="title">
+            Bharathi Group Of Institution
+        </div>
+        <div class="logout">
+            <button type="button" onclick="location.href='login.html';">Log out</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="header">Dashboard</div>
+            <a href="#" onclick="showSection('profile')"><span class="icon">👤</span>Student Profile</a>
+            <a href="#" onclick="showSection('feePayment')"><span class="icon">💳</span>Fee Payment</a>
+            <a href="#" onclick="showSection('courseList')"><span class="icon">📚</span>Course List</a>
+            <a href="#" onclick="showSection('attendanceDetails')"><span class="icon">📅</span>Attendance Details</a>
+            <a href="#" onclick="showSection('internalMarkDetails')"><span class="icon">📑</span>Internal Mark Details</a>
+        </div>
+
+        <div class="content">
+            <div id="profile" class="section active">
+                <h2>Student Profile</h2>
+                <div class="profile-container">
+                    <div class="profile-info">
+                        <h3>Student Name: John Doe</h3>
+                        <p>Student ID: 123456</p>
+                        <p>Email ID: john@example.com</p>
+                        <p>Institution: Bharathi Institute of Technology</p>
+                        <p>Program: B.Tech in Computer Science</p>
+                    </div>
+                    <div class="profile-status">
+                        <img src="passport.png" alt="Student Image" class="student-image">
+                        <p>Current Status: Active</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="feePayment" class="section">
+                <div class="payment">
+                    <h1>Fee Payment</h1>
+                    <form>
+                        <label for="paymentMonths">Select Month:</label>
+                        <select id="paymentMonths">
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                        </select>
+
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" required>
+
+                        <label for="paymentMethod">Payment Method:</label>
+                        <select id="paymentMethod">
+                            <option value="creditCard">Credit Card</option>
+                            <option value="debitCard">Debit Card</option>
+                        </select>
+
+                        <button type="submit">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="courseList" class="section">
+                <div class="course">
+                    <h1>Course List</h1>
+                    <ul class="course-list">
+                        <li class="course-item">
+                            <h2>Data Structures</h2>
+                            <p>Learn about arrays, stacks, and linked lists.</p>
+                        </li>
+                        <li class="course-item">
+                            <h2>Algorithms</h2>
+                            <p>Explore algorithm design techniques.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="attendanceDetails" class="section">
+                <div class="attendance">
+                    <h2>Attendance Details</h2>
+                    <canvas id="attendanceChart"></canvas>
+                </div>
+            </div>
+
+            <div id="internalMarkDetails" class="section">
+                <div class="internal">
+                    <h1>Internal Marks</h1>
+                    <form>
+                        <label for="mark1">Internal 1:</label>
+                        <input type="number" id="mark1">
+
+                        <label for="mark2">Internal 2:</label>
+                        <input type="number" id="mark2">
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.classList.add('active');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('profile');
+        });
+    </script>
+</body>
+</html>

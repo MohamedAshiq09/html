@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airosphere - Digital Marketing Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #1e88e5;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    #services {
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .service-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .service-box {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      width: 250px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05);
+    }
+
+    #cta {
+      background: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 3rem;
+      margin: 3rem 0;
+    }
+
+    .cta-btn {
+      background-color: #ff9800;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #e68a00;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s forwards;
+    }
+
+    .fade-in.delay {
+      animation-delay: 1s;
+    }
+
+    .slide-in {
+      transform: translateX(-100%);
+      animation: slideIn 1.5s forwards;
+    }
+
+    .slide-up {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUp 1.5s forwards;
+    }
+
+    .zoom-in {
+      transform: scale(0.8);
+      animation: zoomIn 1.5s forwards;
+    }
+
+    .zoom-in.delay {
+      animation-delay: 1s;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="fade-in">Airosphere Digital Marketing Services</h1>
+    <p class="fade-in delay">Empowering Your Online Presence</p>
+  </header>
+
+  <section id="services">
+    <h2 class="slide-in">Our Services</h2>
+    <div class="service-list">
+      <div class="service-box slide-up">
+        <h3>SEO Optimization</h3>
+        <p>Maximizing your website's visibility on search engines.</p>
+      </div>
+      <div class="service-box slide-up">
+        <h3>Social Media Marketing</h3>
+        <p>Boosting brand awareness and customer engagement.</p>
+      </div>
+      <div class="service-box slide-up">
+        <h3>Pay-Per-Click Advertising</h3>
+        <p>Driving instant traffic to your website through paid ads.</p>
+      </div>
+      <div class="service-box slide-up">
+        <h3>Content Marketing</h3>
+        <p>Creating valuable content to attract and retain customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cta">
+    <h2 class="zoom-in">Grow Your Business With Us!</h2>
+    <p class="zoom-in delay">Reach new heights with Airosphere's expert digital marketing strategies.</p>
+    <button class="cta-btn" onclick="showMessage()">Contact Us</button>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2024 Airosphere. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thank you for reaching out! We will get in touch soon.");
+    }
+  </script>
+</body>
+</html>

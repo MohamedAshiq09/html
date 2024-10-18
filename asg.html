@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Card and Overlay Effect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 70px;
+        }
+
+        .card {
+            position: relative;
+            width: 350px;
+            min-height: 450px;
+            background-color: #222;
+            padding: 0px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 300ms;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            z-index: -1;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover::before {
+            top: -15px;
+            left: -15px;
+            width: 105%;
+            height: 105%;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            margin-top: 0px;
+            object-fit: cover; 
+            display: block;
+            transition: transform 300ms;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #aaa;
+        }
+
+        .card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(64, 224, 208, 0.85); /* Turquoise with some transparency */
+            transform: translate3d(0, calc(100% - 3.5rem), 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 300ms;
+        }
+
+        .card:hover .overlay {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .overlay h3,
+        .overlay p {
+            color: #fff;
+            margin: 0;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="digital-marketing.jpg" alt="Digital Marketing">
+            <div class="overlay">
+                <h3>WEB DEVELOPMENT</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="ideas-plans.jpg" alt="Ideas & Plans">
+            <div class="overlay">
+                <h3>DIGITAL MARKETING</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="prompt-strategies.jpg" alt="Prompt Strategies">
+            <div class="overlay">
+                <h3>IDEAS & PLANS</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+    </html>

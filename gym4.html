@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/6c/09/6a/6c096af0919d49acb349ec150cc5bb5a.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Left Section (Circular Image) */
+        .left-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .left-section img {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* The orange circle background */
+       
+
+        /* Right Section (Text and Grid) */
+        .right-section {
+            flex: 1;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .right-section h3 {
+            color: yellow;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Grid of Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        
+        .feature-box h4 {
+            
+             color: yellow;
+        }
+        /* Feature Box Styling */
+        .feature-box {
+            display: flex;
+            flex-direction: column; /* Stack icon and text */
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text */
+        }
+
+        .feature-box img {
+            width: 50px; /* Icon size */
+            height: 50px; /* Icon size */
+            margin-bottom: 10px; /* Space between icon and text */
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            color: white;
+            margin-top: 0; /* Adjust top margin */
+        }
+
+        .feature-description {
+            font-size: 0.9rem;
+            color: whitesmoke;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section with Circular Image -->
+        <div class="left-section">
+            <img src="https://i.pinimg.com/564x/81/4a/47/814a47681761d84a405a491bc7fe8cd4.jpg" alt="Fitness Trainers">
+        </div>
+
+        <!-- Right Section with Features -->
+        <div class="right-section">
+            <h3>WHY CHOOSE US?</h3>
+            <h1>Your Best Fitness Partner</h1>
+            
+            <!-- Feature Boxes in a Grid -->
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div>
+                    <div class="feature-box">
+                        <img src="https://i.pinimg.com/564x/e5/1e/78/e51e7851bddd1e652c6131ad1db5ee0b.jpg" alt="Progression Icon">
+                        <h4 class="feature-title">Progression</h4>
+                        <p class="feature-description">Structured programs to track and improve your progress.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div>
+                    <div class="feature-box">
+                        <img src="https://i.pinimg.com/564x/de/c0/e0/dec0e0c4d74d9a5fbf97581568f60fee.jpg" alt="Workout Icon">
+                        <h4 class="feature-title">Workout</h4>
+                        <p class="feature-description">Well-balanced workouts to help you achieve your fitness goals.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div>
+                    <div class="feature-box">
+                        <img src="https://i.pinimg.com/564x/07/a3/f2/07a3f231569fec33f736b3b79a04f045.jpg" alt="Nutrition Icon">
+                        <h4 class="feature-title">Nutrition</h4>
+                        <p class="feature-description">Proper nutrition plans designed specifically for your needs.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div>
+                    <div class="feature-box">
+                        <img src="https://i.pinimg.com/564x/cc/58/06/cc5806b861d37ae9473e65f4918f9f2a.jpg" alt="Self Defense Icon">
+                        <h4 class="feature-title">Self Defense</h4>
+                        <p class="feature-description">Develop self-defense skills and physical strength in one package.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
