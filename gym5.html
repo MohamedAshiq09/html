@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHIQ FITNESS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'FuturaNowDisplay-ExtraBoldItalic', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background-color: #000;
+        }
+
+        /* Header styles */
+        .header {
+            background: #111;
+            padding: 10px 20px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btn {
+            background-color: yellow;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #FBC638;
+        }
+
+        /* Main content styles */
+        .main {
+            height: 100vh;
+            background: url(https://i.pinimg.com/564x/c1/6d/63/c16d6350f0cab5d6d1e57bd583351743.jpg) no-repeat center;
+            display: flex;
+            background-size: 100%;
+            background-position: center;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .content {
+            max-width: 60%;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: yellow;
+        }
+
+        .content p {
+            font-size: 35px;
+            margin-bottom: 10px;
+            margin-left: 125px;
+        }
+
+        .content .subheading {
+            font-size: 85px;
+            color: yellow;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-left: 250px;
+        }
+
+        .content .highlight {
+            font-size: 35px;
+            color: yellow;
+            font-weight: bold;
+            margin-left: 250px;
+        }
+
+        .content .small-text {
+            font-size: 20px;
+            margin-bottom: 1px;
+            margin-left: 200px;
+        }
+
+        /* Button styles */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .cta {
+            display: flex;
+            padding: 5px 20px;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 45px;
+            color: black;
+            background: yellow;
+            transition: 1s;
+            box-shadow: 6px 6px 0 black;
+            transform: skewX(-15deg);
+            margin-left: 230px;
+        }
+
+        .cta:focus {
+            outline: none;
+        }
+
+        .cta:hover {
+            transition: 0.5s;
+            box-shadow: 10px 10px 0 #FBC638;
+        }
+
+        .cta span:nth-child(2) {
+            transition: 0.5s;
+            margin-right: 0px;
+        }
+
+        .cta:hover span:nth-child(2) {
+            transition: 0.5s;
+            margin-right: 45px;
+        }
+
+        span {
+            transform: skewX(15deg);
+        }
+
+        span:nth-child(2) {
+            width: 20px;
+            margin-left: 30px;
+            position: relative;
+            top: 12%;
+        }
+
+        /**************SVG****************/
+        path.one {
+            transition: 0.4s;
+            transform: translateX(-60%);
+        }
+
+        path.two {
+            transition: 0.5s;
+            transform: translateX(-30%);
+        }
+
+        .cta path.one,
+        .cta path.two,
+        .cta path.three {
+            fill: black;
+        }
+
+        .cta:hover path.three {
+            animation: color_anim 1s infinite 0.2s;
+        }
+
+        .cta:hover path.one {
+            transform: translateX(0%);
+            animation: color_anim 1s infinite 0.6s;
+        }
+
+        .cta:hover path.two {
+            transform: translateX(0%);
+            animation: color_anim 1s infinite 0.4s;
+        }
+
+        /* SVG animations */
+        @keyframes color_anim {
+            0% {
+                fill: white;
+            }
+
+            50% {
+                fill: #FBC638;
+            }
+
+            100% {
+                fill: white;
+            }
+        }
+
+        /* Why Choose Us section */
+        .why-choose {
+            background-image: url('https://i.pinimg.com/564x/6c/09/6a/6c096af0919d49acb349ec150cc5bb5a.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .why-choose .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .why-choose .left-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .why-choose .left-section img {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .why-choose .right-section {
+            flex: 1;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .why-choose .right-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .why-choose .right-section h3 {
+            color: yellow;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .why-choose .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .why-choose .feature-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .why-choose .feature-box h4 {
+            color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">ASHIQ FITNESS</div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Schedule</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="btn">Become a Member</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main">
+        <div class="content">
+            <p>Work Hard to Get</p>
+            <h1 class="subheading">Better <span style="font-size: 30px; color: white;">Life</span></h1>
+            <p class="small-text">START YOUR TRAININGS WITH OUR</p>
+            <h1 class="highlight">PROFESSIONAL<span style="font-size: 24px; color: white;"> TRAINERS</span></h1>
+            <div class="wrapper">
+                <a class="cta" href="#">
+                    <span>Get Started</span>
+                    <span>
+                        <svg width="66px" height="43px" viewBox="0 0 66 43">
+                            <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 L44.6770988,42.8607152 C44.4825642,43.0518351 44.1707624,43.0518501 43.9762462,42.8607114 L40.1543245,39.1051534 C39.9578393,38.9124627 39.9556422,38.5980208 40.150503,38.4027861 L54.9935625,23.7871251 L1.00026159,23.7871251 C0.710114606,23.7871251 0.48131492,23.5583254 0.48131492,23.2681784 L0.48131492,19.7318005 C0.48131492,19.4416535 0.710114606,19.2128538 1.00026159,19.2128538 L54.9935625,19.2128538 L40.150503,4.59719281 C39.9556422,4.40195806 39.9578393,4.08751617 40.1543245,3.89482549 Z" fill="#FFFFFF"></path>
+                                <path class="two" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 L44.6770988,42.8607152 C44.4825642,43.0518351 44.1707624,43.0518501 43.9762462,42.8607114 L40.1543245,39.1051534 C39.9578393,38.9124627 39.9556422,38.5980208 40.150503,38.4027861 L54.9935625,23.7871251 L1.00026159,23.7871251 C0.710114606,23.7871251 0.48131492,23.5583254 0.48131492,23.2681784 L0.48131492,19.7318005 C0.48131492,19.4416535 0.710114606,19.2128538 1.00026159,19.2128538 L54.9935625,19.2128538 L40.150503,4.59719281 C39.9556422,4.40195806 39.9578393,4.08751617 40.1543245,3.89482549 Z" fill="#000000"></path>
+                                <path class="three" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 L44.6770988,42.8607152 C44.4825642,43.0518351 44.1707624,43.0518501 43.9762462,42.8607114 L40.1543245,39.1051534 C39.9578393,38.9124627 39.9556422,38.5980208 40.150503,38.4027861 L54.9935625,23.7871251 L1.00026159,23.7871251 C0.710114606,23.7871251 0.48131492,23.5583254 0.48131492,23.2681784 L0.48131492,19.7318005 C0.48131492,19.4416535 0.710114606,19.2128538 1.00026159,19.2128538 L54.9935625,19.2128538 L40.150503,4.59719281 C39.9556422,4.40195806 39.9578393,4.08751617 40.1543245,3.89482549 Z" fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="left-section">
+                <img src="https://i.pinimg.com/564x/98/d8/3b/98d83b4f08fa58c91bcf9ecf9da169f6.jpg" alt="Fitness Image">
+            </div>
+            <div class="right-section">
+                <h1>Why Choose Us?</h1>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <h3>Experience & Expertise</h3>
+                        <p>With 10+ years in the fitness industry, our trainers are highly experienced in helping individuals meet their fitness goals.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Personalized Programs</h3>
+                        <p>Each program is uniquely designed to cater to your body type and fitness level, ensuring you get the best results possible.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>State-of-the-Art Equipment</h3>
+                        <p>Our gym is equipped with the latest fitness technology and tools to help you train efficiently.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Holistic Approach</h3>
+                        <p>We believe in a comprehensive approach to fitness that includes exercise, nutrition, and mental well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
