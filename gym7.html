@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Schedule</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .schedule-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .workout-day {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .workout-day h2 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .exercise {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .exercise li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .schedule-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .schedule-container {
+                grid-template-columns: 1fr;
+            }
+
+            .workout-day h2 {
+                font-size: 18px;
+            }
+
+            .exercise li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Weekly Shoulder Workout Schedule</h1>
+
+    <div class="schedule-container">
+        <div class="workout-day">
+            <h2>Monday</h2>
+            <ul class="exercise">
+                <li>Overhead Press - 4 sets of 10 reps</li>
+                <li>Lateral Raises - 4 sets of 12 reps</li>
+                <li>Front Raises - 4 sets of 12 reps</li>
+                <li>Rear Delt Flys - 3 sets of 15 reps</li>
+            </ul>
+        </div>
+
+        <div class="workout-day">
+            <h2>Wednesday</h2>
+            <ul class="exercise">
+                <li>Arnold Press - 4 sets of 10 reps</li>
+                <li>Face Pulls - 4 sets of 12 reps</li>
+                <li>Upright Rows - 4 sets of 10 reps</li>
+                <li>Dumbbell Shrugs - 4 sets of 15 reps</li>
+            </ul>
+        </div>
+
+        <div class="workout-day">
+            <h2>Friday</h2>
+            <ul class="exercise">
+                <li>Push Press - 4 sets of 8 reps</li>
+                <li>Seated Dumbbell Press - 4 sets of 10 reps</li>
+                <li>Cable Lateral Raises - 4 sets of 12 reps</li>
+                <li>Reverse Pec Deck Fly - 3 sets of 15 reps</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
